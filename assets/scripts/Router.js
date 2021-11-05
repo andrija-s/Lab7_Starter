@@ -70,10 +70,10 @@ export class Router {
        console.log(error);
        return;
     }
-    let hash = (page == 'home') ? '' : '#' + page;
+    let hash = (page == 'home') ? ' ' : '#' + page;
     if (!statePopped && window.location.hash != hash) {
        history.pushState(history.state, '', window.location + hash);
     }
-    this[page];
+    this[page].call();
   }
 }
