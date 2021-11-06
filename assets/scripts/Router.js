@@ -67,7 +67,7 @@ export class Router {
      *  4. Finally, call the stored function for the given page
      */
     if (!this[page]) {
-       console.log(error);
+       console.log("Bad.");
        return;
     }
     let hash = (page == 'home') ? ' ' : '#' + page;
